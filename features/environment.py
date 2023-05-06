@@ -16,7 +16,9 @@ def mobile_init(context, test_name):
     mobile_emulation = {"deviceName": "Nexus 5"}
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
-    context.driver = webdriver.Chrome(executable_path='C:\\Users\\vsupe\QA\\Automation\\python-selenium-automation\\chromedriver', chrome_options=chrome_options)
+    context.driver = webdriver.Chrome(
+        executable_path='C:\\Users\\vsupe\QA\\Automation\\python-selenium-automation\\chromedriver',
+        chrome_options=chrome_options)
 
     context.driver.implicitly_wait(5)
     context.driver.wait = WebDriverWait(context.driver, 10)
